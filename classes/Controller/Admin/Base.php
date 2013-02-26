@@ -78,9 +78,11 @@ class Controller_Admin_Base extends Controller_Template_Base {
 			$tpl->content = '';
 			$tpl->is_admin = $this->user === 'admin'; //TODO: настроить роли
 			//---
-			Assets::css('admin_main', '/static/css/admin/main.css', NULL, array('media' => 'screen'));
+			//Assets::css('admin_main', '/static/css/admin/main.css', NULL, array('media' => 'screen'));
 			Assets::js('jquery', 'http://yandex.st/jquery/1.9.1/jquery.js');
 			Assets::js('admin_main', '/static/js/admin/main.js', array('main'));
+			Assets::css('lesscss', '/static/less/admin/main.less', NULL, array('media' => 'screen', 'rel' => 'stylesheet/less'));
+			Assets::js('lessjs', '/static/js/less-1.3.3.js');
 		}
 	}
 
