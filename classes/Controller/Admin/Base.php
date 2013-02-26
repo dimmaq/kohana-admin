@@ -113,7 +113,7 @@ class Controller_Admin_Base extends Controller_Template_Base {
 			$overflow = array();
 		$overflow['directory'] = $dir;
 		$overflow['id'] = $id;
-		Kohana::$log->add(Log::INFO, 'admin_go_to: ' . "$dir, $controller, $action, $id, " . print_r($overflow, TRUE));
+		//Kohana::$log->add(Log::INFO, 'admin_go_to: ' . "$dir, $controller, $action, $id, " . print_r($overflow, TRUE));
 		parent::go_to('admin', $controller, $action, $overflow);
 	}
 
