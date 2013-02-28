@@ -13,7 +13,7 @@
 				<!-- главное меню -->
 				<div id="mmenu">
 					<?=admin_draw_menu_items($mmenu, $mmenu_cur, 'admin/');?>
-					<span class="right"><?= HTML::anchor('admin/logout', __('Выход')); ?></span>
+					<span class="right"><?= HTML::anchor('admin/logout', __('Выход'), array('class' => 'confirm')); ?></span>
 					<span class="right">&nbsp;|&nbsp;</span>
 					<span class="right"><?= HTML::anchor('/', 'Переход к сайту', array('target'=>'_blank')); ?></span>
 				</div>
