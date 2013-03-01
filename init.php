@@ -13,7 +13,6 @@ Route::set('admin/auth', 'admin/<action>', array(
 Route::set('admin', 'admin(/<directory>(/<controller>(/<action>(/<id>))))')
 	->filter(function($route, $params, $request)
 	{
-		Kohana::$log->add(Log::DEBUG, Debug::vars($params));
 		if (empty($params['directory']))
 			$params['directory'] = 'Admin';
 		else
