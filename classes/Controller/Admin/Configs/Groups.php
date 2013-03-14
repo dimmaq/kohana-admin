@@ -92,6 +92,12 @@ class Controller_Admin_Configs_Groups extends Controller_Admin_Configs {
 		{
 			if (Arr::get($types, $key) == 'array')
 				$value = Arr::from_editable_string($value);
+			else
+			{
+				$int = (int) $value;
+				if ($value === (string) $int)
+					$value = $int;
+			}
 			$config->set($key, $value);
 		}
 		$this->go_back();
