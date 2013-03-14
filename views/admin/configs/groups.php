@@ -13,7 +13,7 @@ foreach($groups as $key => $value)
 <?php
 	echo Form::open(_ar('configs', 'groups', 'add')),
 					'<b>Добавить:</b>&nbsp;',
-					Form::input('name', '', array('required', 'placeholder' => 'Имя', 'pattern' => '[A-Za-z]+')), '&nbsp;',
+					Form::input('name', '', array('required', 'placeholder' => 'Имя')), '&nbsp;',
 					Form::input('title', '', array('required', 'placeholder' => 'Описание')), '&nbsp;',
 					Form::submit('submit', 'OK'),
 					Form::close();
