@@ -109,7 +109,7 @@ class Controller_Admin_Configs_Groups extends Controller_Admin_Configs {
 		$type = Arr::get($_POST, 'type');
 		$title = Arr::get($_POST, 'title');
 		$group = $this->request->param('id');
-		if (!$name OR !$title OR !$group)
+		if (!$name OR !$group)
 		{
 			$this->go_back();
 		}
