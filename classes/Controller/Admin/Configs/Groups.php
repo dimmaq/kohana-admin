@@ -49,7 +49,7 @@ class Controller_Admin_Configs_Groups extends Controller_Admin_Configs {
 		);
 		$this->template->content = View::factory('admin/configs/edit', $view_data);
 		$this->template->title[] = 'Группы';
-		Assets::css('admin-form-add-edit', '/static/css/admin/form-add-edit.css');
+		Assets::css('admin-form-add-edit', '/static/less/admin/form-add-edit.less', NULL, array('rel' => 'stylesheet/less'));
 		//---
 		if (Kohana::$environment >= Kohana::TESTING)
 		{

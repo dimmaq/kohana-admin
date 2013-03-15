@@ -15,7 +15,7 @@
 			$name_text = "<b>$name</b>";
 		if ($val['type']=='array')
 			echo '<tr><td class="form-desc">', $name_text, '<br ><i class="form-hint">(список)</i></td>',
-							'<td><textarea spellcheck="false" name="items[', $name,']">', HTML::entities($val['value']), '</textarea></td></tr>';
+							'<td><textarea wrap="off" spellcheck="false" name="items[', $name,']">', HTML::entities($val['value']), '</textarea></td></tr>';
 		else
 			echo '<tr><td class="form-desc">', $name_text, '<br ><i class="form-hint"></i></td>',
 							'<td><input spellcheck="false" type="text" name="items[', $name, ']" value="', HTML::entities($val['value']), '" /></td></tr>';
