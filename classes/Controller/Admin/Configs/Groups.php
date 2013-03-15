@@ -36,10 +36,8 @@ class Controller_Admin_Configs_Groups extends Controller_Admin_Configs {
 				'name' => $key,
 				'value' => $value,
 			);
-			if (is_array($value))
-			{
-				$item['value'] = Arr::to_editable_string($item['value']);
-			}
+			$item['value'] = Helper::value_to_string($item['value']);
+			//---
 			$items[] = $item;
 		}
 		$view_data = array(
@@ -94,9 +92,7 @@ class Controller_Admin_Configs_Groups extends Controller_Admin_Configs {
 				$value = Arr::from_editable_string($value);
 			else
 			{
-				$int = (int) $value;
-				if ($value === (string) $int)
-					$value = $int;
+				$value = Helper::string_to_value($value);
 			}
 			$config->set($key, $value);
 		}
