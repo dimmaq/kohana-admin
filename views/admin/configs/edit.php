@@ -15,10 +15,10 @@
 			$name_text = "<b>$name</b>";
 		if ($val['type']=='array')
 			echo '<tr><td class="form-desc">', $name_text, '<br ><i class="form-hint">(список)</i></td>',
-							'<td><textarea name="items[', $name,']">', HTML::entities($val['value']), '</textarea></td></tr>';
+							'<td><textarea spellcheck="false" name="items[', $name,']">', HTML::entities($val['value']), '</textarea></td></tr>';
 		else
 			echo '<tr><td class="form-desc">', $name_text, '<br ><i class="form-hint"></i></td>',
-							'<td><input type="text" name="items[', $name, ']" value="', HTML::entities($val['value']), '" /></td></tr>';
+							'<td><input spellcheck="false" type="text" name="items[', $name, ']" value="', HTML::entities($val['value']), '" /></td></tr>';
 
 		echo Form::hidden("types[$name]", $val['type']);
 	}
